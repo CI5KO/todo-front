@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import { NextUI } from './providers/NextUIProvider'
 import type { Metadata } from 'next'
 
 const APP_NAME = 'To Do List App'
@@ -31,8 +32,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className="dark">
+      <body>
+        <NextUI>{children}</NextUI>
+      </body>
     </html>
   )
 }
